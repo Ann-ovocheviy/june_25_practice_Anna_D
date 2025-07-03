@@ -72,16 +72,14 @@ body {
 
 .sport-person:hover {
   background-color: #eee;
-  transform: scale(1.18);
+  transition: smooth .3s;
 }
 
-.sport-person:hover .sport-person__photo, .sport-person:hover .sport-person__photo img {
+.sport-person:hover .sport-person__photo img {
   border-radius: 30px;
 }
 
 .sport-person:hover .sport-person__extra {
-  opacity: 1;
-  margin-top: 9px;
   display: block;
 }
 

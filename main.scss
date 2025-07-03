@@ -1,1 +1,97 @@
+//index
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+//main
+.sport {
+  display: grid;
+  max-width: 1000px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 40px;
+}
+
+.sport-person{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  height: 231px;
+  text-align: center;
+  color: #2F4F4F;
+
+  &__photo {
+    // padding-top: 10px;
+    width: 200px;
+    height: 200px;
+
+  & img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  }
+
+  &__rank {
+    position: absolute;
+    top: 45%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: #8B0000;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  &__extra {
+    display: none;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+    margin-top: 9px;
+  }
+
+  &:hover{
+  transition: 0.3s smooth;
+  background-color: #EEEEEE;
+  // transform: scale(1.18);
+
+  .sport-person__photo img {
+    border-radius: 30px;
+  }
+
+  .sport-person__extra {
+    display: block; /* Робимо видимим */
+  }
+  }
+}
+
+//media
+
+@media (min-width: 1000px) {
+  .sport {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
